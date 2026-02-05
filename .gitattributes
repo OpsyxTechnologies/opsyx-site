@@ -1,8 +1,12 @@
-# Mark config/lock files as generated — collapses them in GitHub PR diffs
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Collapse config files in GitHub PR diffs
+*.json linguist-generated=true
+*.lock linguist-generated=true
 package-lock.json linguist-generated=true
-tailwind.config.ts linguist-generated=true
-tsconfig.json linguist-generated=true
-tsconfig.app.json linguist-generated=true
-tsconfig.node.json linguist-generated=true
+tsconfig*.json linguist-generated=true
 postcss.config.js linguist-generated=true
-eslint.config.js linguist-generated=true
+tailwind.config.ts linguist-generated=true
+vite.config.ts linguist-generated=true
+components.json linguist-generated=true
