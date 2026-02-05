@@ -61,17 +61,13 @@ export function Footer() {
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Federal Credentials</h4>
             <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
+              <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
                 <span className="text-muted-foreground">SAM.gov UEI</span>
-                <span className="font-mono text-foreground">{siteConfig.credentials.uei}</span>
-              </div>
-              <div className="flex justify-between">
+                <span className="font-mono text-foreground text-right">{siteConfig.credentials.uei}</span>
                 <span className="text-muted-foreground">CAGE Code</span>
-                <span className="font-mono text-foreground">{siteConfig.credentials.cage}</span>
-              </div>
-              <div className="flex justify-between">
+                <span className="font-mono text-foreground text-right">{siteConfig.credentials.cage}</span>
                 <span className="text-muted-foreground">D-U-N-S</span>
-                <span className="font-mono text-foreground">{siteConfig.credentials.duns}</span>
+                <span className="font-mono text-foreground text-right">{siteConfig.credentials.duns}</span>
               </div>
               <div className="mt-4 flex items-center gap-2 px-3 py-2 bg-alert/10 border border-alert/30 rounded-sm">
                 <span className="w-2 h-2 bg-alert rounded-full animate-pulse"></span>
