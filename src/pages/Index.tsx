@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { MissionStatement } from "@/components/sections/mission-statement";
 import { CoreValues } from "@/components/sections/core-values";
 import { StrategicFocus } from "@/components/sections/strategic-focus";
-import { ContactSection } from "@/components/sections/contact-section";
 import { Footer } from "@/components/layout/footer";
 
 const Index = () => {
@@ -19,9 +18,6 @@ const Index = () => {
       </section>
       <section id="focus">
         <StrategicFocus />
-      </section>
-      <section id="contact">
-        <ContactSection />
       </section>
       <Footer />
     </div>

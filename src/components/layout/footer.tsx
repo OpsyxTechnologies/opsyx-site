@@ -1,27 +1,95 @@
 import { siteConfig } from "@/config/site";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-background border-t border-border mt-12 py-8 flex flex-col items-center">
-      <div className="mb-4 flex items-center justify-center">
-        <span className="font-stencil text-2xl text-foreground uppercase tracking-wider">OPSYX</span>
-        <span className="text-alert ml-2 font-stencil text-2xl uppercase tracking-wider">TECHNOLOGIES</span>
+    <footer className="w-full bg-card/30 border-t border-border mt-12">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div className="flex items-center mb-4">
+              <span className="font-stencil text-xl text-foreground uppercase tracking-wider">OPSYX</span>
+              <span className="text-alert ml-2 font-stencil text-xl uppercase tracking-wider">TECHNOLOGIES</span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">Mission-Critical IT & Cybersecurity Solutions</p>
+            <div className="flex gap-4">
+              <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-alert transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+              </a>
+              <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-alert transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              </a>
+              <a href={siteConfig.socials.discord} target="_blank" rel="noopener noreferrer" aria-label="Discord" className="hover:text-alert transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+              </a>
+              <a href={siteConfig.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="X" className="hover:text-alert transition-colors">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Contact</h4>
+            <div className="space-y-3 text-sm">
+              <a href={"mailto:" + siteConfig.emails.general} className="flex items-center gap-2 text-muted-foreground hover:text-alert transition-colors">
+                <Mail className="w-4 h-4" />
+                {siteConfig.emails.general}
+              </a>
+              <a href={"tel:" + siteConfig.phone.replace(/[^0-9]/g, '')} className="flex items-center gap-2 text-muted-foreground hover:text-alert transition-colors">
+                <Phone className="w-4 h-4" />
+                {siteConfig.phone}
+              </a>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <MapPin className="w-4 h-4" />
+                {siteConfig.location}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Federal Credentials</h4>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">SAM.gov UEI</span>
+                <span className="font-mono text-foreground">{siteConfig.credentials.uei}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">CAGE Code</span>
+                <span className="font-mono text-foreground">{siteConfig.credentials.cage}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">D-U-N-S</span>
+                <span className="font-mono text-foreground">{siteConfig.credentials.duns}</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Certifications</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2 px-3 py-2 bg-alert/10 border border-alert/30 rounded-sm">
+                <span className="w-2 h-2 bg-alert rounded-full animate-pulse"></span>
+                <span className="text-sm font-stencil text-alert">SDVOSB Verified</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-2 bg-ops/10 border border-ops/30 rounded-sm">
+                <span className="w-2 h-2 bg-ops rounded-full animate-pulse"></span>
+                <span className="text-sm font-stencil text-ops">SAM.gov Registered</span>
+              </div>
+              <a href="/contact" className="block text-center px-4 py-2 bg-alert text-alert-foreground font-stencil text-sm uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all">
+                Request Quote
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Opsyx Technologies. All rights reserved.</span>
+          <div className="flex gap-6 text-xs text-muted-foreground">
+            <a href="/contact" className="hover:text-alert transition-colors">Contact</a>
+            <a href="/projects" className="hover:text-alert transition-colors">Projects</a>
+          </div>
+        </div>
       </div>
-      <div className="flex gap-6 mb-2">
-        <a href={siteConfig.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-alert transition-colors">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
-        </a>
-        <a href={siteConfig.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-alert transition-colors">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href={siteConfig.socials.google} target="_blank" rel="noopener noreferrer" aria-label="Google" className="hover:text-alert transition-colors">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M21.35 11.1h-9.18v2.98h5.27c-.23 1.22-1.39 3.58-5.27 3.58-3.17 0-5.76-2.62-5.76-5.84s2.59-5.84 5.76-5.84c1.81 0 3.02.77 3.72 1.43l2.54-2.47c-1.62-1.51-3.7-2.43-6.26-2.43-5.18 0-9.39 4.21-9.39 9.31s4.21 9.31 9.39 9.31c5.42 0 9.02-3.81 9.02-9.18 0-.62-.07-1.09-.16-1.56z"/></svg>
-        </a>
-        <a href={siteConfig.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-alert transition-colors">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724 9.865 9.865 0 0 1-3.127 1.195 4.916 4.916 0 0 0-8.384 4.482A13.94 13.94 0 0 1 1.671 3.149 4.916 4.916 0 0 0 3.195 9.723 4.9 4.9 0 0 1 .964 9.1v.062a4.916 4.916 0 0 0 3.946 4.817 4.902 4.902 0 0 1-2.212.084 4.918 4.918 0 0 0 4.588 3.417A9.868 9.868 0 0 1 .594 19.54a13.94 13.94 0 0 0 7.548 2.212c9.057 0 14.01-7.514 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/></svg>
-        </a>
-      </div>
-      <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Opsyx Technologies. All rights reserved.</span>
     </footer>
   );
 }
