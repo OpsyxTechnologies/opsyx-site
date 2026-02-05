@@ -1,7 +1,7 @@
 import { NavHeader } from "@/components/layout/nav-header";
 import { Footer } from "@/components/layout/footer";
 import { siteConfig } from "@/config/site";
-import { Shield, Target, FileCheck, Heart, Lightbulb, Award, User } from "lucide-react";
+import { Shield, Target, FileCheck, Heart, Lightbulb, Award, Clock, CheckCircle, Crosshair } from "lucide-react";
 
 const About = () => {
   const values = [
@@ -10,6 +10,29 @@ const About = () => {
     { icon: <FileCheck className="w-5 h-5" />, title: "Clarity", description: "Documentation and execution with precision and purpose" },
     { icon: <Heart className="w-5 h-5" />, title: "Service", description: "Grounded in veteran principles — mission before ego" },
     { icon: <Lightbulb className="w-5 h-5" />, title: "Innovation", description: "Bridging legacy wisdom with modern threat intelligence" },
+  ];
+
+  const whatYouGet = [
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Cleared & Trusted",
+      description: "Able to operate in classified and unclassified environments. Public sector, private sector, DoD — we move seamlessly across all of them."
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Military Discipline",
+      description: "13 years of service means we show up, communicate clearly, hit deadlines, and take ownership. No excuses, no surprises."
+    },
+    {
+      icon: <Crosshair className="w-6 h-6" />,
+      title: "Operational Mindset",
+      description: "We've worked under pressure in environments where failure isn't an option. That same intensity applies to your project."
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "We Deliver",
+      description: "Plain and simple — we do what we say we're going to do. Your mission becomes our mission until it's complete."
+    },
   ];
 
   return (
@@ -81,33 +104,36 @@ const About = () => {
           </div>
         </section>
 
-        {/* Founder */}
+        {/* What You Get */}
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="font-stencil text-3xl uppercase tracking-wider text-foreground mb-4">
-                  Leadership
+                  What You <span className="text-alert">Get</span>
                 </h2>
+                <p className="text-muted-foreground">When you partner with Opsyx Technologies</p>
               </div>
-              <div className="bg-card/50 border border-border rounded-sm p-8">
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  <div className="w-32 h-32 rounded-full bg-alert/10 border-2 border-alert flex items-center justify-center">
-                    <User className="w-16 h-16 text-alert" />
-                  </div>
-                  <div className="flex-1 text-center md:text-left">
-                    <h3 className="font-stencil text-2xl uppercase tracking-wider text-foreground mb-2">
-                      {siteConfig.team.ceo.name}
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {whatYouGet.map((item, index) => (
+                  <div key={index} className="bg-card/50 border border-border rounded-sm p-6 hover:border-alert/50 transition-all">
+                    <div className="p-3 bg-alert/10 rounded-sm text-alert w-fit mb-4">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-stencil text-lg uppercase tracking-wider text-foreground mb-2">
+                      {item.title}
                     </h3>
-                    <p className="text-alert font-stencil uppercase tracking-wider mb-4">{siteConfig.team.ceo.title} & Founder</p>
-                    <p className="text-muted-foreground mb-4">
-                      Cyber Warfare Technician with a Master's degree in Information Assurance. CompTIA trifecta and CySA+ certified, qualified as Senior Host Analyst and Basic Network Analyst. Currently pursuing SANS certification courses (SEC504, ICS310).
-                    </p>
-                    <p className="text-muted-foreground">
-                      Service-disabled veteran bringing military precision to commercial cybersecurity operations.
-                    </p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
                   </div>
-                </div>
+                ))}
+              </div>
+
+              <div className="mt-8 p-6 bg-background border border-alert/30 rounded-sm">
+                <p className="text-center text-muted-foreground">
+                  <span className="text-foreground font-semibold">Bottom line:</span> You get a team that's been in the trenches, 
+                  understands operational pressure, and delivers like your mission depends on it — because it does.
+                </p>
               </div>
             </div>
           </div>
