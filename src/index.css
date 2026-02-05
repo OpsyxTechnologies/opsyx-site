@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Military-Industrial Colors */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Tactical Gunmetal Primary */
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Alert Red Secondary */
+    --secondary: 0 85% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Tactical Olive Accent */
+    --accent: 82 20% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 85% 55%;
+
+    --radius: 0.25rem;
+
+    /* Custom Mission Colors */
+    --tactical: 0 0% 25%;
+    --tactical-foreground: 0 0% 100%;
+    
+    --alert: 0 85% 55%;
+    --alert-foreground: 0 0% 100%;
+    
+    --ops: 82 20% 35%;
+    --ops-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-tactical: linear-gradient(135deg, hsl(0 0% 7%), hsl(0 0% 15%));
+    --gradient-alert: linear-gradient(135deg, hsl(0 85% 55%), hsl(0 75% 45%));
+    --gradient-ops: linear-gradient(135deg, hsl(82 20% 35%), hsl(82 15% 25%));
+    --gradient-scan: linear-gradient(180deg, transparent, hsl(0 85% 55% / 0.1), transparent);
+
+    /* Shadows */
+    --shadow-tactical: 0 4px 20px -4px hsl(0 85% 55% / 0.3);
+    --shadow-glow: 0 0 30px hsl(0 85% 55% / 0.2);
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 85% 55%;
+  }
+
+  .dark {
+    /* Dark mode uses the same military theme */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 85% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 82 20% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 85% 55%;
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Custom utilities */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-tactical rounded-sm;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-alert;
+  }
+}
