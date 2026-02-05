@@ -2,6 +2,18 @@ import { siteConfig } from "@/config/site";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
+  const certifications = [
+    { name: "A+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "Network+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "Security+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "CySA+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "Linux+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "CSAP", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "CC", org: "ISC2", color: "text-green-500 border-green-500/30 bg-green-500/10" },
+    { name: "CyberOps", org: "Cisco", color: "text-blue-500 border-blue-500/30 bg-blue-500/10" },
+    { name: "CEH", org: "EC-Council", color: "text-amber-500 border-amber-500/30 bg-amber-500/10" },
+  ];
+
   return (
     <footer className="w-full bg-card/30 border-t border-border mt-12">
       <div className="container mx-auto px-6 py-12">
@@ -61,21 +73,29 @@ export function Footer() {
                 <span className="text-muted-foreground">D-U-N-S</span>
                 <span className="font-mono text-foreground">{siteConfig.credentials.duns}</span>
               </div>
+              <div className="mt-4 flex items-center gap-2 px-3 py-2 bg-alert/10 border border-alert/30 rounded-sm">
+                <span className="w-2 h-2 bg-alert rounded-full animate-pulse"></span>
+                <span className="text-sm font-stencil text-alert">SDVOSB Verified</span>
+              </div>
             </div>
           </div>
 
           <div>
-            <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Certifications</h4>
-            <div className="space-y-3">
-              <div className="flex items-center gap-2 px-3 py-2 bg-alert/10 border border-alert/30 rounded-sm">
-                <span className="w-2 h-2 bg-alert rounded-full animate-pulse"></span>
-                <span className="text-sm font-stencil text-alert">SDVOSB Verified</span>
-              </div>
-              <div className="flex items-center gap-2 px-3 py-2 bg-ops/10 border border-ops/30 rounded-sm">
-                <span className="w-2 h-2 bg-ops rounded-full animate-pulse"></span>
-                <span className="text-sm font-stencil text-ops">SAM.gov Registered</span>
-              </div>
+            <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Technical Certifications</h4>
+            <div className="flex flex-wrap gap-2">
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className={`px-2 py-1 text-xs font-mono border rounded-sm ${cert.color}`}
+                  title={`${cert.org} ${cert.name}`}
+                >
+                  {cert.name}
+                </div>
+              ))}
             </div>
+            <p className="text-xs text-muted-foreground mt-3">
+              Industry certifications held by our team
+            </p>
           </div>
         </div>
 
