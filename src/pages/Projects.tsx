@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-command-center.jpg";
-import { ProjectsNavHeader } from "@/components/projects-nav-header";
+import { ProjectsNavHeader } from "@/components/layout/projects-nav-header";
 
 const GITHUB_ORG = "opsyx-technologies";
 

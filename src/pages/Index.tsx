@@ -1,9 +1,9 @@
-import { NavHeader } from "@/components/nav-header";
-import { HeroSection } from "@/components/hero-section";
-import { MissionStatement } from "@/components/mission-statement";
-import { CoreValues } from "@/components/core-values";
-import { StrategicFocus } from "@/components/strategic-focus";
-import { ContactSection } from "@/components/contact-section";
+import { NavHeader } from "@/components/layout/nav-header";
+import { HeroSection } from "@/components/sections/hero-section";
+import { MissionStatement } from "@/components/sections/mission-statement";
+import { CoreValues } from "@/components/sections/core-values";
+import { StrategicFocus } from "@/components/sections/strategic-focus";
+import { ContactSection } from "@/components/sections/contact-section";
 
 const Index = () => {
   return (
