@@ -56,26 +56,98 @@ const About = () => {
         {/* Purple Team Approach */}
         <section className="py-16">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto bg-card/50 border border-border rounded-sm p-8">
-              <h2 className="font-stencil text-2xl uppercase tracking-wider text-foreground mb-6 text-center">
-                Our <span className="text-purple-500">Purple Team</span> Approach
-              </h2>
-              <p className="text-muted-foreground mb-6 text-center">
-                We leverage the strengths of both offensive and defensive operations, combining them into a unified strategy for maximum readiness and resilience.
-              </p>
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-10">
+                <h2 className="font-stencil text-3xl uppercase tracking-wider text-foreground mb-4">
+                  Our <span className="text-purple-500">Purple Team</span> Approach
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  We leverage the strengths of both offensive and defensive operations, combining them into a unified strategy for maximum readiness and resilience.
+                </p>
+              </div>
+              
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-4 border border-red-500/30 rounded-sm bg-red-500/5">
-                  <span className="font-stencil text-red-500 text-lg">Red Team</span>
-                  <p className="text-sm text-muted-foreground mt-2">Offensive Operations</p>
+                {/* Red Team */}
+                <div className="border border-red-500/30 rounded-sm bg-red-500/5 p-6">
+                  <div className="text-center mb-4">
+                    <span className="font-stencil text-red-500 text-xl">Red Team</span>
+                    <p className="text-sm text-red-400 mt-1">Offensive Operations</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    We think like attackers. Red Team operations simulate real-world threats to find vulnerabilities before malicious actors do.
+                  </p>
+                  <ul className="text-xs text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-0.5">›</span>
+                      <span>Penetration testing & exploitation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-0.5">›</span>
+                      <span>Social engineering assessments</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-500 mt-0.5">›</span>
+                      <span>Attack path mapping</span>
+                    </li>
+                  </ul>
                 </div>
-                <div className="text-center p-4 border border-purple-500/30 rounded-sm bg-purple-500/5">
-                  <span className="font-stencil text-purple-500 text-lg">Purple Team</span>
-                  <p className="text-sm text-muted-foreground mt-2">Unified Strategy</p>
+
+                {/* Purple Team */}
+                <div className="border border-purple-500/30 rounded-sm bg-purple-500/5 p-6 md:-mt-4 md:mb-4 md:scale-105 shadow-lg">
+                  <div className="text-center mb-4">
+                    <span className="font-stencil text-purple-500 text-xl">Purple Team</span>
+                    <p className="text-sm text-purple-400 mt-1">Unified Strategy</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    The best of both worlds. Purple Team integrates offensive findings with defensive improvements in real-time — not as separate engagements, but as one continuous process.
+                  </p>
+                  <ul className="text-xs text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-0.5">›</span>
+                      <span>Attack simulation + immediate defense tuning</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-0.5">›</span>
+                      <span>Detection gap analysis</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-0.5">›</span>
+                      <span>Continuous security validation</span>
+                    </li>
+                  </ul>
                 </div>
-                <div className="text-center p-4 border border-blue-500/30 rounded-sm bg-blue-500/5">
-                  <span className="font-stencil text-blue-500 text-lg">Blue Team</span>
-                  <p className="text-sm text-muted-foreground mt-2">Defensive Operations</p>
+
+                {/* Blue Team */}
+                <div className="border border-blue-500/30 rounded-sm bg-blue-500/5 p-6">
+                  <div className="text-center mb-4">
+                    <span className="font-stencil text-blue-500 text-xl">Blue Team</span>
+                    <p className="text-sm text-blue-400 mt-1">Defensive Operations</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    We protect what matters. Blue Team operations focus on detecting, responding to, and preventing threats before they cause damage.
+                  </p>
+                  <ul className="text-xs text-muted-foreground space-y-2">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-0.5">›</span>
+                      <span>Security monitoring & threat detection</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-0.5">›</span>
+                      <span>Incident response & forensics</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500 mt-0.5">›</span>
+                      <span>Hardening & configuration management</span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+
+              <div className="mt-8 p-4 bg-card/50 border border-border rounded-sm text-center">
+                <p className="text-sm text-muted-foreground">
+                  <span className="text-foreground font-semibold">Why it matters:</span> Most firms offer Red or Blue separately. 
+                  We operate as Purple by default — because security isn't about finding problems or fixing them, it's about doing both simultaneously.
+                </p>
               </div>
             </div>
           </div>
