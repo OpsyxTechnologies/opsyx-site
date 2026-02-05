@@ -1,5 +1,5 @@
 import { siteConfig } from "@/config/site";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 export function Footer() {
   const certifications = [
@@ -14,10 +14,29 @@ export function Footer() {
     { name: "CEH", org: "EC-Council", color: "text-amber-500 border-amber-500/30 bg-amber-500/10" },
   ];
 
+  const federalCredentials = [
+    {
+      label: "SAM.gov UEI",
+      value: siteConfig.credentials.uei,
+      url: `https://sam.gov/search/?keywords=${siteConfig.credentials.uei}`,
+    },
+    {
+      label: "CAGE Code",
+      value: siteConfig.credentials.cage,
+      url: `https://sam.gov/search/?keywords=${siteConfig.credentials.cage}`,
+    },
+    {
+      label: "D-U-N-S",
+      value: siteConfig.credentials.duns,
+      url: `https://www.dnb.com/duns-number/lookup.html`,
+    },
+  ];
+
   return (
     <footer className="w-full bg-card/30 border-t border-border mt-12">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
+          {/* Brand */}
           <div>
             <div className="flex items-center mb-4">
               <span className="font-stencil text-xl text-foreground uppercase tracking-wider">OPSYX</span>
@@ -40,6 +59,7 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Contact */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Contact</h4>
             <div className="space-y-3 text-sm">
@@ -58,17 +78,24 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Federal Credentials */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Federal Credentials</h4>
-            <div className="space-y-2 text-sm">
-              <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2">
-                <span className="text-muted-foreground">SAM.gov UEI</span>
-                <span className="font-mono text-foreground text-right">{siteConfig.credentials.uei}</span>
-                <span className="text-muted-foreground">CAGE Code</span>
-                <span className="font-mono text-foreground text-right">{siteConfig.credentials.cage}</span>
-                <span className="text-muted-foreground">D-U-N-S</span>
-                <span className="font-mono text-foreground text-right">{siteConfig.credentials.duns}</span>
-              </div>
+            <div className="space-y-3 text-sm">
+              {federalCredentials.map((cred, index) => (
+                <a
+                  key={index}
+                  href={cred.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between group hover:text-alert transition-colors"
+                >
+                  <span className="text-muted-foreground group-hover:text-alert">{cred.label}</span><span className="font-mono text-foreground group-hover:text-alert flex items-center gap-1">
+                    {cred.value}
+                    <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </span>
+                </a>
+              ))}
               <div className="mt-4 flex items-center gap-2 px-3 py-2 bg-alert/10 border border-alert/30 rounded-sm">
                 <span className="w-2 h-2 bg-alert rounded-full animate-pulse"></span>
                 <span className="text-sm font-stencil text-alert">SDVOSB Verified</span>
@@ -76,6 +103,7 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Technical Certifications */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Technical Certifications</h4>
             <div className="flex flex-wrap gap-2">
