@@ -49,10 +49,10 @@ export function HeroSection() {
           </div>
         </div>
 
-        <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="inline-flex items-center gap-2 px-8 py-4 bg-alert text-alert-foreground font-stencil uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all duration-300 hover:shadow-glow animate-fade-in animation-delay-600">
+        <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-alert text-alert-foreground font-stencil uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all duration-300 hover:shadow-glow animate-fade-in animation-delay-600">
           Request a Quote
           <ChevronDown className="w-4 h-4 animate-bounce" />
-        </button>
+        </a>
       </div>
 
       <div className="absolute inset-0 z-5 pointer-events-none opacity-20">
