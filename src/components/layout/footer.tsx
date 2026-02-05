@@ -7,11 +7,14 @@ export function Footer() {
     { name: "Network+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
     { name: "Security+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
     { name: "CySA+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
+    { name: "PenTest+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
     { name: "Linux+", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
     { name: "CSAP", org: "CompTIA", color: "text-red-500 border-red-500/30 bg-red-500/10" },
     { name: "CC", org: "ISC2", color: "text-green-500 border-green-500/30 bg-green-500/10" },
     { name: "CyberOps", org: "Cisco", color: "text-blue-500 border-blue-500/30 bg-blue-500/10" },
     { name: "CEH", org: "EC-Council", color: "text-amber-500 border-amber-500/30 bg-amber-500/10" },
+    { name: "PowerShell", org: "Microsoft", color: "text-sky-500 border-sky-500/30 bg-sky-500/10" },
+    { name: "RHCSA", org: "Red Hat", color: "text-red-600 border-red-600/30 bg-red-600/10" },
   ];
 
   const federalCredentials = [
@@ -36,7 +39,6 @@ export function Footer() {
     <footer className="w-full bg-card/30 border-t border-border mt-12">
       <div className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
           <div>
             <div className="flex items-center mb-4">
               <span className="font-stencil text-xl text-foreground uppercase tracking-wider">OPSYX</span>
@@ -59,7 +61,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Contact</h4>
             <div className="space-y-3 text-sm">
@@ -78,19 +79,19 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Federal Credentials */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Federal Credentials</h4>
             <div className="space-y-3 text-sm">
               {federalCredentials.map((cred, index) => (
-                <a
+                
                   key={index}
                   href={cred.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between group hover:text-alert transition-colors"
                 >
-                  <span className="text-muted-foreground group-hover:text-alert">{cred.label}</span><span className="font-mono text-foreground group-hover:text-alert flex items-center gap-1">
+                  <span className="text-muted-foreground group-hover:text-alert">{cred.label}</span>
+                  <span className="font-mono text-foreground group-hover:text-alert flex items-center gap-1">
                     {cred.value}
                     <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </span>
@@ -103,7 +104,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Technical Certifications */}
           <div>
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Technical Certifications</h4>
             <div className="flex flex-wrap gap-2">
