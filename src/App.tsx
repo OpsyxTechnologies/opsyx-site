@@ -8,10 +8,13 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ProjectsPage from "./pages/Projects";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Work from "./pages/Work";
 
 const queryClient = new QueryClient();
 
-const AppRouter = () => {
+function AppRouter() {
   const navigate = useNavigate();
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -25,12 +28,15 @@ const AppRouter = () => {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/work" element={<Work />} />
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
-};
+}
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
