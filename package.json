@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --config config/vite.config.ts",
-    "build": "vite build --config config/vite.config.ts",
+    "dev": "vite",
+    "build": "vite build",
     "build:dev": "vite build --mode development --config config/vite.config.ts",
     "lint": "eslint . --config config/eslint.config.js",
     "preview": "vite preview --config config/vite.config.ts"
