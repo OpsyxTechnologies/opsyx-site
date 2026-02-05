@@ -83,13 +83,7 @@ export function Footer() {
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Federal Credentials</h4>
             <div className="space-y-3 text-sm">
               {federalCredentials.map((cred, index) => (
-                
-                  key={index}
-                  href={cred.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between group hover:text-alert transition-colors"
-                >
+                <a key={index} href={cred.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group hover:text-alert transition-colors">
                   <span className="text-muted-foreground group-hover:text-alert">{cred.label}</span>
                   <span className="font-mono text-foreground group-hover:text-alert flex items-center gap-1">
                     {cred.value}
@@ -108,11 +102,7 @@ export function Footer() {
             <h4 className="font-stencil text-sm uppercase tracking-wider text-foreground mb-4">Technical Certifications</h4>
             <div className="flex flex-wrap gap-2">
               {certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className={`px-2 py-1 text-xs font-mono border rounded-sm ${cert.color}`}
-                  title={`${cert.org} ${cert.name}`}
-                >
+                <div key={index} className={`px-2 py-1 text-xs font-mono border rounded-sm ${cert.color}`} title={`${cert.org} ${cert.name}`}>
                   {cert.name}
                 </div>
               ))}
