@@ -75,9 +75,6 @@ export function Footer() {
                 <span className="w-2 h-2 bg-ops rounded-full animate-pulse"></span>
                 <span className="text-sm font-stencil text-ops">SAM.gov Registered</span>
               </div>
-              <a href="/contact" className="block text-center px-4 py-2 bg-alert text-alert-foreground font-stencil text-sm uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all">
-                Request Quote
-              </a>
             </div>
           </div>
         </div>
@@ -85,8 +82,10 @@ export function Footer() {
         <div className="border-t border-border pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Opsyx Technologies. All rights reserved.</span>
           <div className="flex gap-6 text-xs text-muted-foreground">
+            <a href="/about" className="hover:text-alert transition-colors">About</a>
+            <a href="/services" className="hover:text-alert transition-colors">Services</a>
+            <a href="/work" className="hover:text-alert transition-colors">Work</a>
             <a href="/contact" className="hover:text-alert transition-colors">Contact</a>
-            <a href="/projects" className="hover:text-alert transition-colors">Projects</a>
           </div>
         </div>
       </div>
