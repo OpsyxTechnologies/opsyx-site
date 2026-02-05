@@ -1,6 +1,6 @@
 import heroImage from "@/assets/hero-command-center.jpg";
 import { AnimatedBadge } from "@/components/ui/animated-badge";
-import { ChevronDown, Shield, Server, Globe } from "lucide-react";
+import { ArrowRight, Shield, Server, Globe } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -49,9 +49,9 @@ export function HeroSection() {
           </div>
         </div>
 
-        <a href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-alert text-alert-foreground font-stencil uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all duration-300 hover:shadow-glow animate-fade-in animation-delay-600">
-          Request a Quote
-          <ChevronDown className="w-4 h-4 animate-bounce" />
+        <a href="/about" className="inline-flex items-center gap-2 px-8 py-4 bg-alert text-alert-foreground font-stencil uppercase tracking-wider rounded-sm hover:bg-alert/90 transition-all duration-300 hover:shadow-glow animate-fade-in animation-delay-600">
+          Learn More
+          <ArrowRight className="w-4 h-4" />
         </a>
       </div>
 
