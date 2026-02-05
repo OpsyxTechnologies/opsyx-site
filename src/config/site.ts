@@ -1,18 +1,42 @@
 export const siteConfig = {
   name: "Opsyx Technologies",
+  legalName: "Opsyx Technologies LLC",
   tagline: "Mission-Critical Cybersecurity at the Speed of Relevance",
-  motto: "Defend Forward and Operate Resilient",
+  motto: "Defend Forward & Operate Resilient",
   description: "SDVOSB cybersecurity consultancy delivering Purple Team operations, secure automation, and federal compliance at the speed of relevance.",
   url: "https://opsyxtechnologies.com",
-  email: "contact@opsyx.com",
+  location: "Augusta, GA",
+  phone: "(762) 383-9654",
+  emails: {
+    general: "info@opsyxtechnologies.com",
+    primary: "opsyx@opsyxtechnologies.com",
+  },
   socials: {
-    linkedin: import.meta.env.VITE_LINKEDIN_URL || "https://linkedin.com/company/opsyx-technologies",
-    github: import.meta.env.VITE_GITHUB_URL || "https://github.com/OpsyxTechnologies",
-    twitter: import.meta.env.VITE_TWITTER_URL || "https://twitter.com/opsyxtech",
-    google: import.meta.env.VITE_GOOGLE_URL || "https://google.com/search?q=Opsyx+Technologies",
+    linkedin: "https://linkedin.com/company/opsyxtechnologies",
+    github: "https://github.com/OpsyxTechnologies",
+    twitter: "https://twitter.com/OpsyxTech",
+    discord: "https://discord.gg/FEpAKYBx",
+  },
+  credentials: {
+    type: "SDVOSB",
+    uei: "ZCJ8EM85AJB3",
+    cage: "14CY7",
+    duns: "11-956-9005",
+    samExpiration: "Jul 31, 2026",
+  },
+  team: {
+    ceo: {
+      name: "Jonathan Pichardo",
+      title: "CEO",
+      email: "jonathan.pichardo@opsyxtechnologies.com",
+    },
+    contracts: {
+      name: "Bryant Sami",
+      title: "Contract & Acquisition Specialist",
+      email: "bryant.sami@opsyxtechnologies.com",
+    },
   },
   org: {
     github: "OpsyxTechnologies",
-    type: "SDVOSB",
   },
 };
