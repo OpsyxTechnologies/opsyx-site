@@ -1,23 +1,24 @@
 # Security Policy
 
+## Supported Versions
+
+| Version | Supported |
+|---------|-----------|
+| Latest on `main` | Yes |
+| All other branches | No |
+
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability in this project, please report it responsibly.
 
 **Email:** security@opsyxtechnologies.com
-**Response Time:** We will acknowledge receipt within 48 hours and provide a resolution timeline within 5 business days.
 
-Please do **not** open public issues for security vulnerabilities.
+Please include a detailed description of the vulnerability, steps to reproduce, and any potential impact. We will acknowledge receipt within 48 hours and provide a remediation timeline within 5 business days.
 
-## Supported Versions
+## Security Practices
 
-| Version | Supported |
-|---------|-----------|
-| main    | ✅        |
+This repository enforces branch protection on `main` requiring passing CI builds before merge. Dependencies are monitored for known vulnerabilities and patched promptly. The GitHub Actions deployment pipeline runs in a least-privilege environment with scoped permissions.
 
-## Security Measures
+## Scope
 
-- All deployments via GitHub Actions with pinned action versions
-- HTTPS enforced via GitHub Pages
-- Dependency auditing via `npm audit` on every build
-- No secrets or credentials stored in the repository
+This policy applies to the Opsyx Technologies website codebase hosted at [opsyxtechnologies.com](https://opsyxtechnologies.com). For security concerns related to other Opsyx Technologies services, contact security@opsyxtechnologies.com.
