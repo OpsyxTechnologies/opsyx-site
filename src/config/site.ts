@@ -12,7 +12,7 @@ export const siteConfig = {
     primary: "opsyx@opsyxtechnologies.com",
   },
   socials: {
-    linkedin: "https://www.linkedin.com/in/opsyx-technologies-llc",
+    linkedin: "https://www.linkedin.com/in/opsyxtechnologies",
     github: "https://github.com/OpsyxTechnologies",
     twitter: "https://twitter.com/OpsyxTech",
     discord: "https://discord.gg/FEpAKYBx",
