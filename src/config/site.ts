@@ -15,6 +15,8 @@ export const siteConfig = {
     linkedin: "https://www.linkedin.com/in/opsyxtechnologies",
     github: "https://github.com/OpsyxTechnologies",
     twitter: "https://twitter.com/OpsyxTech",
+    facebook: "https://www.facebook.com/opsyxtechnologies",
+    instagram: "https://www.instagram.com/opsyxtechnologies",
     discord: "https://discord.gg/FEpAKYBx",
   },
   credentials: {
