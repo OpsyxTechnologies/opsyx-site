@@ -13,7 +13,7 @@ Opsyx Technologies takes the security of our systems and our clients' trust seri
 
 If you discover a security vulnerability in this project, please report it responsibly through one of the following channels.
 
-**Primary:** security@opsyxtechnologies.com
+**Primary:** info@opsyxtechnologies.com
 
 **Alternative:** Open a private security advisory via [GitHub Security Advisories](https://github.com/OpsyxTechnologies/opsyx-site/security/advisories/new)
 
@@ -67,7 +67,7 @@ Opsyx Technologies operates as a Service-Disabled Veteran-Owned Small Business (
 
 ## Contact
 
-**Security Reports:** security@opsyxtechnologies.com
+**Security Reports:** info@opsyxtechnologies.com
 
 **General Inquiries:** info@opsyxtechnologies.com
 

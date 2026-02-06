@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: "(762) 383-9654",
   emails: {
     general: "info@opsyxtechnologies.com",
-    primary: "opsyx@opsyxtechnologies.com",
+    primary: "info@opsyxtechnologies.com",
   },
   socials: {
     linkedin: "https://www.linkedin.com/in/opsyxtechnologies",
