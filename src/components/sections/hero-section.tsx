@@ -25,7 +25,7 @@ export function HeroSection() {
         </h1>
 
         <div className="mb-4">
-          <span className="text-base md:text-lg font-mono text-alert tracking-wide">defend forward and operate resilient</span>
+          <span className="text-base md:text-lg font-mono text-alert tracking-wide">Defend Forward and Operate Resilient</span>
         </div>
 
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-200">
