@@ -6,10 +6,10 @@ import { Shield, Server, Globe, Briefcase, ArrowRight, FileText } from "lucide-r
 
 const Index = () => {
   const serviceHighlights = [
-    { icon: <Shield className="w-6 h-6" />, title: "Cybersecurity", description: "Purple Team operations & compliance", href: "/services#cybersecurity" },
-    { icon: <Server className="w-6 h-6" />, title: "IT Infrastructure", description: "Server deployment & management", href: "/services#infrastructure" },
-    { icon: <Globe className="w-6 h-6" />, title: "Digital Services", description: "Web design & DNS architecture", href: "/services#digital" },
-    { icon: <Briefcase className="w-6 h-6" />, title: "Consulting", description: "Strategy & network architecture", href: "/services#consulting" },
+    { icon: <Shield className="w-6 h-6" />, title: "Cybersecurity", description: "Purple Team operations, threat assessments, vulnerability management & federal compliance", href: "/services#cybersecurity" },
+    { icon: <Server className="w-6 h-6" />, title: "IT Infrastructure", description: "Secure server deployment, network hardening, cloud migration & systems management", href: "/services#infrastructure" },
+    { icon: <Globe className="w-6 h-6" />, title: "Digital Services", description: "Professional web development, DNS architecture, domain security & digital presence", href: "/services#digital" },
+    { icon: <Briefcase className="w-6 h-6" />, title: "Consulting", description: "Security strategy, risk assessments, network architecture & mission planning", href: "/services#consulting" },
   ];
 
   return (
