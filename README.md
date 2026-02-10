@@ -29,9 +29,9 @@ Core capabilities include Purple Team Operations, Security Automation and Orches
 
 | Layer | Technology |
 |-------|------------|
-| Framework | React 18 + TypeScript |
+| Framework | React 19 + TypeScript |
 | Build Tool | Vite 7 |
-| Routing | React Router DOM 6 |
+| Routing | React Router DOM 7 |
 | Styling | Tailwind CSS + shadcn/ui |
 | Data Fetching | TanStack Query 5 |
 | Hosting | GitHub Pages |
@@ -55,18 +55,31 @@ Core capabilities include Purple Team Operations, Security Automation and Orches
 ---
 
 ## Project Structure
-```text
+\\	ext
 opsyx-site/
 ├── .github/
+│   ├── dependabot.yml                 # Dependabot grouped update config
 │   └── workflows/
 │       └── deploy.yml                 # GitHub Actions deploy to GitHub Pages
 ├── public/
+│   ├── assets/
+│   │   └── og-image.png               # OpenGraph social sharing image
 │   ├── 404.html                       # SPA fallback for GitHub Pages routing
+│   ├── android-chrome-192x192.png     # Android PWA icon
+│   ├── android-chrome-512x512.png     # Android PWA icon (large)
+│   ├── apple-touch-icon.png           # iOS home screen icon
 │   ├── CNAME                          # Custom domain configuration
-│   ├── favicon.ico                    # Site favicon
+│   ├── favicon-16x16.png              # Browser tab icon (small)
+│   ├── favicon-32x32.png              # Browser tab icon (large)
+│   ├── favicon.ico                    # Legacy favicon
 │   ├── robots.txt                     # Search engine crawl directives
-│   └── sitemap.xml                    # SEO sitemap
+│   └── sitemap.xml                    # SEO sitemap (6 routes)
+├── scripts/
+│   └── generate-og-image.cjs          # OG image generation script
 ├── src/
+│   ├── assets/
+│   │   ├── hero-command-center.jpg    # Hero background image
+│   │   └── tactical-grid.jpg          # Grid background image
 │   ├── components/
 │   │   ├── layout/                    # Structural components
 │   │   │   ├── footer.tsx             # Site footer with social links
@@ -91,12 +104,12 @@ opsyx-site/
 │   │   ├── About.tsx                  # About page
 │   │   ├── Contact.tsx                # Contact page
 │   │   ├── Index.tsx                  # Home page
-│   │   ├── NotFound.tsx               # 404 page
+│   │   ├── NotFound.tsx               # 404 page (military themed)
 │   │   ├── Projects.tsx               # Projects page
 │   │   ├── Services.tsx               # Services page
 │   │   └── Work.tsx                   # Work/portfolio page
 │   ├── App.tsx                        # Root component with router
-│   ├── index.css                      # Design system (HSL color tokens, custom properties)
+│   ├── index.css                      # Design system (HSL color tokens)
 │   ├── main.tsx                       # Application entry point
 │   └── vite-env.d.ts                  # Vite type declarations
 ├── .env.local.example                 # Environment variable template
@@ -106,14 +119,14 @@ opsyx-site/
 ├── index.html                         # HTML entry point with SEO meta and JSON-LD
 ├── package.json                       # Dependencies and scripts
 ├── postcss.config.js                  # PostCSS configuration
+├── README.md                          # Project documentation
 ├── SECURITY.md                        # Security policy and vulnerability reporting
 ├── tailwind.config.ts                 # Tailwind CSS theme and design tokens
 ├── tsconfig.json                      # TypeScript base configuration
 ├── tsconfig.app.json                  # TypeScript app configuration
 ├── tsconfig.node.json                 # TypeScript node configuration
 └── vite.config.ts                     # Vite build configuration
-```
-
+\
 ---
 
 ## Design System
