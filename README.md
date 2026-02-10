@@ -8,55 +8,7 @@
 
 **Mission-Critical Cybersecurity at the Speed of Relevance**
 
-[![Deploy](https://github.com/OpsyxTechnologies/opsyx-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/OpsyxTechnologies/opsyx-site/actions/workflows/deploy.yml)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fopsyxtechnologies.com&style=flat-square&label=opsyxtechnologies.com)](https://opsyxtechnologies.com)
-
-[Website](https://opsyxtechnologies.com) · [LinkedIn](https://linkedin.com/company/opsyx-technologies) · [Discord](https://discord.gg/opsyxtechnologies) · [Contact](https://opsyxtechnologies.com/#contact)
-
-</div>
-
----
-
-## About
-
-Opsyx Technologies is a Service-Disabled Veteran-Owned Small Business (SDVOSB) delivering cybersecurity solutions to federal and commercial clients. This repository contains the source code for the official company website, live at [opsyxtechnologies.com](https://opsyxtechnologies.com).
-
-Core capabilities include Purple Team Operations, Security Automation and Orchestration, Federal Compliance (NIST, CMMC, FedRAMP), and Threat Intelligence Integration.
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Framework | React 19 + TypeScript |
-| Build Tool | Vite 7 |
-| Routing | React Router DOM 7 |
-| Styling | Tailwind CSS + shadcn/ui |
-| Data Fetching | TanStack Query 5 |
-| Hosting | GitHub Pages |
-| CI/CD | GitHub Actions |
-| Domain | opsyxtechnologies.com via CNAME |
-
----
-
-## Site Pages
-
-| Page | Route | Description |
-|------|-------|-------------|
-| Home | `/` | Hero section, mission statement, core values, strategic focus, and contact |
-| About | `/about` | Company background and team information |
-| Services | `/services` | Cybersecurity service offerings and capabilities |
-| Work | `/work` | Portfolio and case studies |
-| Projects | `/projects` | Technical projects and initiatives |
-| Contact | `/contact` | Direct contact form and information |
-| 404 | `/*` | Custom military-themed "Target Not Found" page |
-
----
-
-## Project Structure
-\\	ext
-opsyx-site/
+[![Deploy](https://github.com/OpsyxTechnologies/opsyx-site/
 ├── .github/
 │   ├── dependabot.yml                 # Dependabot grouped update config
 │   └── workflows/
