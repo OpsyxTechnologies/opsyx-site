@@ -8,30 +8,65 @@
 
 **Mission-Critical Cybersecurity at the Speed of Relevance**
 
-[![Deploy](https://github.com/OpsyxTechnologies/opsyx-site/
+[![Deploy](https://github.com/OpsyxTechnologies/opsyx-site/actions/workflows/deploy.yml/badge.svg)](https://github.com/OpsyxTechnologies/opsyx-site/actions/workflows/deploy.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fopsyxtechnologies.com&style=flat-square&label=opsyxtechnologies.com)](https://opsyxtechnologies.com)
+
+[Website](https://opsyxtechnologies.com) · [LinkedIn](https://linkedin.com/company/opsyx-technologies) · [Discord](https://discord.gg/opsyxtechnologies) · [Contact](https://opsyxtechnologies.com/#contact)
+
+</div>
+
+---
+
+## About
+
+Opsyx Technologies is a Service-Disabled Veteran-Owned Small Business (SDVOSB) delivering cybersecurity solutions to federal and commercial clients. This repository contains the source code for the official company website, live at [opsyxtechnologies.com](https://opsyxtechnologies.com).
+
+Core capabilities include Purple Team Operations, Security Automation and Orchestration, Federal Compliance (NIST, CMMC, FedRAMP), and Threat Intelligence Integration.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | React 18 + TypeScript |
+| Build Tool | Vite 7 |
+| Routing | React Router DOM 6 |
+| Styling | Tailwind CSS + shadcn/ui |
+| Data Fetching | TanStack Query 5 |
+| Hosting | GitHub Pages |
+| CI/CD | GitHub Actions |
+| Domain | opsyxtechnologies.com via CNAME |
+
+---
+
+## Site Pages
+
+| Page | Route | Description |
+|------|-------|-------------|
+| Home | `/` | Hero section, mission statement, core values, strategic focus, and contact |
+| About | `/about` | Company background and team information |
+| Services | `/services` | Cybersecurity service offerings and capabilities |
+| Work | `/work` | Portfolio and case studies |
+| Projects | `/projects` | Technical projects and initiatives |
+| Contact | `/contact` | Direct contact form and information |
+| 404 | `/*` | Custom military-themed "Target Not Found" page |
+
+---
+
+## Project Structure
+```text
+opsyx-site/
 ├── .github/
-│   ├── dependabot.yml                 # Dependabot grouped update config
 │   └── workflows/
 │       └── deploy.yml                 # GitHub Actions deploy to GitHub Pages
 ├── public/
-│   ├── assets/
-│   │   └── og-image.png               # OpenGraph social sharing image
 │   ├── 404.html                       # SPA fallback for GitHub Pages routing
-│   ├── android-chrome-192x192.png     # Android PWA icon
-│   ├── android-chrome-512x512.png     # Android PWA icon (large)
-│   ├── apple-touch-icon.png           # iOS home screen icon
 │   ├── CNAME                          # Custom domain configuration
-│   ├── favicon-16x16.png              # Browser tab icon (small)
-│   ├── favicon-32x32.png              # Browser tab icon (large)
-│   ├── favicon.ico                    # Legacy favicon
+│   ├── favicon.ico                    # Site favicon
 │   ├── robots.txt                     # Search engine crawl directives
-│   └── sitemap.xml                    # SEO sitemap (6 routes)
-├── scripts/
-│   └── generate-og-image.cjs          # OG image generation script
+│   └── sitemap.xml                    # SEO sitemap
 ├── src/
-│   ├── assets/
-│   │   ├── hero-command-center.jpg    # Hero background image
-│   │   └── tactical-grid.jpg          # Grid background image
 │   ├── components/
 │   │   ├── layout/                    # Structural components
 │   │   │   ├── footer.tsx             # Site footer with social links
@@ -56,12 +91,12 @@
 │   │   ├── About.tsx                  # About page
 │   │   ├── Contact.tsx                # Contact page
 │   │   ├── Index.tsx                  # Home page
-│   │   ├── NotFound.tsx               # 404 page (military themed)
+│   │   ├── NotFound.tsx               # 404 page
 │   │   ├── Projects.tsx               # Projects page
 │   │   ├── Services.tsx               # Services page
 │   │   └── Work.tsx                   # Work/portfolio page
 │   ├── App.tsx                        # Root component with router
-│   ├── index.css                      # Design system (HSL color tokens)
+│   ├── index.css                      # Design system (HSL color tokens, custom properties)
 │   ├── main.tsx                       # Application entry point
 │   └── vite-env.d.ts                  # Vite type declarations
 ├── .env.local.example                 # Environment variable template
@@ -71,14 +106,14 @@
 ├── index.html                         # HTML entry point with SEO meta and JSON-LD
 ├── package.json                       # Dependencies and scripts
 ├── postcss.config.js                  # PostCSS configuration
-├── README.md                          # Project documentation
 ├── SECURITY.md                        # Security policy and vulnerability reporting
 ├── tailwind.config.ts                 # Tailwind CSS theme and design tokens
 ├── tsconfig.json                      # TypeScript base configuration
 ├── tsconfig.app.json                  # TypeScript app configuration
 ├── tsconfig.node.json                 # TypeScript node configuration
 └── vite.config.ts                     # Vite build configuration
-\
+```
+
 ---
 
 ## Design System
