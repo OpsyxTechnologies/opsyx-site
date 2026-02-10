@@ -17,17 +17,17 @@
   </url>
   <url>
     <loc>https://opsyxtechnologies.com/work</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://opsyxtechnologies.com/contact</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://opsyxtechnologies.com/projects</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://opsyxtechnologies.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
